@@ -13,17 +13,3 @@
         <img src="assets/user-profile.png" alt="Perfil del usuario" class="rounded-circle" style="width: 50px; height: 50px;">
       </div>
     </div>
-  
-    <div class="movie-carousel mt-4">
-      <h2 class="mb-3">Top 5 Películas Más Puntuadas</h2>
-      <div class="d-flex overflow-auto">
-        <div *ngFor="let movie of topRatedMovies" class="me-3" style="width: 200px;">
-          <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.title }}" class="img-fluid rounded">
-          <p class="mt-2 text-center">{{ movie.title }}</p>
-          <p class="text-muted text-center">Puntuación: {{ movie.vote_average }}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  

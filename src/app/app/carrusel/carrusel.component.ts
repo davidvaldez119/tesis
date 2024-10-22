@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   }
 
   loadTopRatedMovies() {
-    this.http.get('https://api.themoviedb.org/3/movie/top_rated?api_key=c130076811f0e957626523dba642db29&language=en-US&page=1')
+    this.http.get('https://api.themoviedb.org/3/movie/top_rated?api_key=c130076811f0e957626523dba642db29&language=es-US&page=1')
       .subscribe((response: any) => {
         if (response && response.results) {
           this.topRatedMovies = response.results.slice(0, 5); 
