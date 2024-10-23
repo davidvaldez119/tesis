@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-barra-superior',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './barra-superior.component.css'
 })
 export class BarraSuperiorComponent {
-
+  constructor(private http: HttpClient) {}
 }
