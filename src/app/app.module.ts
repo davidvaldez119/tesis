@@ -5,12 +5,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { carruselComponent } from './app/carrusel/carrusel.component';
 import { BarraSuperiorComponent } from './app/barra-superior/barra-superior.component';
+import { MovieReviewComponent } from './movie-review/movie-review.component';
+import { ReviewLandingComponent } from './review-landing/review-landing.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     carruselComponent,
-    BarraSuperiorComponent
+    BarraSuperiorComponent,
+    MovieReviewComponent,
+    ReviewLandingComponent
   ],
   imports: [
     BrowserModule,

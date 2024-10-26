@@ -1,0 +1,8 @@
+<div class="star-rating">
+    <span *ngFor="let star of [].constructor(maxStars); let i = index"
+          (click)="rate(i + 1)"
+          [ngClass]="{'filled': i < stars}">
+      ★
+    </span>
+  </div>
+  <p>Calificación: {{ stars }} de {{ maxStars }}</p>
