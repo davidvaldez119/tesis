@@ -3,10 +3,11 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { CarruselComponent } from './carrusel/carrusel.component';
-import { BarraSuperiorComponent } from './barra-superior/barra-superior.component';
-import { MovieReviewComponent } from './movie-review/movie-review.component';
-import { ReviewLandingComponent } from './review-landing/review-landing.component';
+import { ReviewLandingComponent } from './Pages/review-landing/review-landing.component';
+import { CarruselComponent } from './Components/carrusel/carrusel.component';
+import { BarraSuperiorComponent } from './Components/barra-superior/barra-superior.component';
+import { MovieReviewComponent } from './Components/movie-review/movie-review.component';
+import { SearchboxComponent } from './Components/searchbox/searchbox.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ReviewLandingComponent } from './review-landing/review-landing.componen
     CarruselComponent,
     BarraSuperiorComponent,
     MovieReviewComponent,
-    ReviewLandingComponent
+    ReviewLandingComponent,
+    SearchboxComponent
   ],
   imports: [
     BrowserModule,
