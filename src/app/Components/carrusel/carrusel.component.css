@@ -53,9 +53,9 @@
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(255, 255, 255, 0.8); 
-  border: none;
+  border: yes;
   color: #333; 
-  padding: 10px;
+  padding: 30px;
   cursor: pointer;
   z-index: 2;
   border-radius: 50%;
@@ -69,11 +69,11 @@
 }
 
 .left-arrow {
-  left: -20px; 
+  left: 10px; 
 }
 
 .right-arrow {
-  right: -20px; 
+  right: 10px; 
 }
 
 .carousel-arrow:hover {

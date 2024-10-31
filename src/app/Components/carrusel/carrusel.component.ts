@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { MoviesIn } from '../../Interfaces/movieIn';
+
 
 @Component({
   selector: 'app-carrusel',
@@ -7,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./carrusel.component.css']
 })
 export class CarruselComponent implements OnInit {
-  topRatedMovies: any[] = [];
+  topRatedMovies: MoviesIn[] = [];
   currentSlideIndex: number = 0;
   currentSlideIndex2: number = 0;
   maxVisibleMovies: number = 5;
@@ -27,7 +29,8 @@ export class CarruselComponent implements OnInit {
       .subscribe(
         (response: any) => {
           if (response && response.results) {
-            this.topRatedMovies = response.results.slice(0, 10); 
+            this.topRatedMovies = response.results.slice(0, 10);
+            console.log("Películas cargadas:", this.topRatedMovies); 
           }
         },
         (error) => {
