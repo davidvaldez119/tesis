@@ -8,7 +8,7 @@ import { CarruselComponent } from './Components/carrusel/carrusel.component';
 import { BarraSuperiorComponent } from './Components/barra-superior/barra-superior.component';
 import { MovieReviewComponent } from './Components/movie-review/movie-review.component';
 import { SearchboxComponent } from './Components/searchbox/searchbox.component';
-import { AppRoutingModule } from './app-routing.module'; // Importa el módulo de rutas
+import { AppRoutingModule } from './app-routing.module'; 
 
 @NgModule({
   declarations: [
