@@ -8,7 +8,9 @@ import { CarruselComponent } from './Components/carrusel/carrusel.component';
 import { BarraSuperiorComponent } from './Components/barra-superior/barra-superior.component';
 import { MovieReviewComponent } from './Components/movie-review/movie-review.component';
 import { SearchboxComponent } from './Components/searchbox/searchbox.component';
-import { AppRoutingModule } from './app-routing.module'; 
+import { AppRoutingModule } from './app-routing.module';
+import { ProfilePageComponent } from './Pages/profile-page/profile-page.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { AppRoutingModule } from './app-routing.module';
     BarraSuperiorComponent,
     MovieReviewComponent,
     ReviewLandingComponent,
-    SearchboxComponent
+    SearchboxComponent,
+    ProfilePageComponent
   ],
   imports: [
     BrowserModule,
