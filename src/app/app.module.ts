@@ -10,6 +10,8 @@ import { MovieReviewComponent } from './Components/movie-review/movie-review.com
 import { SearchboxComponent } from './Components/searchbox/searchbox.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ProfilePageComponent } from './Pages/profile-page/profile-page.component';
+import { MovieSearchComponent } from './movie-search/movie-search.component';
+import { MovieService } from './movie.service';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { ProfilePageComponent } from './Pages/profile-page/profile-page.componen
     MovieReviewComponent,
     ReviewLandingComponent,
     SearchboxComponent,
-    ProfilePageComponent
+    ProfilePageComponent,
+    MovieSearchComponent
+
   ],
   imports: [
     BrowserModule,

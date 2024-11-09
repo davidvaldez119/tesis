@@ -1,0 +1,35 @@
+<div class="container" >
+    <h1>Buscá tu pelicula</h1>
+    <div class="row mt-4" >
+        <div class="col-2 text-rigth">
+            
+                <label for="search" class="form-label pt-2"> Busqueda</label>
+                
+        </div>
+        <div class="col-8">
+            <input [(ngModel)]="busqueda" type="text"  class="form-control" id="search" placeholder="Buscar pelicula">
+
+        </div>
+                <div class="col-2">
+                    <button class="btn btn-primary w-100" (click)="buscar()"> Buscar</button>
+                </div>
+
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-2" *ngFor="let item of resultados">
+            <div class="card" >
+                <a [routerLink]="['/movie-review', item.id]">
+                    <img [src]="'https://image.tmdb.org/t/p/w500' + item.poster_path" alt="{{ item.title }}" class="img-fluid rounded">
+                  </a>
+                  <a [routerLink]="['/movie-review', item.id]" class="movie-title-link">
+                    <p class="mt-2 text-center">{{ item.title }}</p>
+                  </a>
+                  <p class="text-muted text-center">Puntuación: {{ item.vote_average }}</p>
+              </div>
+
+        </div>
+
+    </div>
+
+
