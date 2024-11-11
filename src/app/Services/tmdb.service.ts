@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class TmdbService {
   private apiKey: string = 'c130076811f0e957626523dba642db29';
-  private baseUrl: string = 'https://api.themoviedb.org/3/movie/550?api_key=c130076811f0e957626523dba642db29';
+  private baseUrl: string = 'https://api.themoviedb.org/3';
 
   constructor(private http: HttpClient) {}
 

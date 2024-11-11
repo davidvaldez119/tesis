@@ -5,6 +5,8 @@ import { MovieReviewComponent } from './Components/movie-review/movie-review.com
 import { ProfilePageComponent } from './Pages/profile-page/profile-page.component';
 import { LoginComponent } from './Components/login/login.component';
 import { SignupComponent } from './Components/signup/signup.component';
+import { MovieSearchComponent } from './movie-search/movie-search.component';
+
 
 
 const routes: Routes = [
@@ -14,6 +16,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'signup', component: SignupComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'search/:query', component: MovieSearchComponent}
 ];
 
 @NgModule({

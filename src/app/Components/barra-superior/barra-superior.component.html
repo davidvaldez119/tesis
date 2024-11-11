@@ -6,11 +6,13 @@
           <img src="assets/logo1-butaca-critica.png" alt="La Butaca Crítica" class="img-fluid logo">
         </a>
       </div>
+      
+
       <div class="col-md-6">
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="Buscar películas">
-          <!--input [(ngModel)]="searchQuery" type="text" class="form-control" placeholder="Buscar películas"-->
-          <!--button class="btn btn-primary" (click)="searchMovies()">Buscar</button-->
+          
+          <input [(ngModel)]="busqueda" type="text" class="form-control" placeholder="Buscar películas">
+          <button class="btn btn-primary" (click)="buscar()">Buscar películas</button>
         </div>
       </div>
       <div class="col-md-2 text-end">

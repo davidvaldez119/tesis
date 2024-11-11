@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-barra-superior',
@@ -7,5 +7,16 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './barra-superior.component.css'
 })
 export class BarraSuperiorComponent {
-  constructor(private http: HttpClient) {}
+  busqueda: string = "";
+ 
+    
+  constructor( private router: Router) {
+    
+  }
+  buscar() {
+    
+    this.router.navigate(['/search', this.busqueda])
+}
+
+ 
 }
