@@ -1,0 +1,20 @@
+<nav>
+    <a class="button" routerLink="" 
+    routerLinkActive="activebutton" 
+    [routerLinkActiveOptions]="{exact: true}">
+        Home
+    </a>
+    @if (!activeUser) {
+        <a class="button" routerLink="/login"
+        routerLinkActive="activebutton">Login</a>
+        <a class="button" routerLink="/signup"
+        routerLinkActive="activebutton">Register</a>
+    } @else {
+        <a class="button" (click)="onLogout()">Logout</a>
+    }
+    <ng-template *ngIf="!activeUser;else logout">
+    </ng-template>
+    <ng-template #logout>
+    </ng-template>
+</nav>
+

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReviewLandingComponent } from './Pages/review-landing/review-landing.component';
 import { CarruselComponent } from './Components/carrusel/carrusel.component';
 import { BarraSuperiorComponent } from './Components/barra-superior/barra-superior.component';
@@ -10,7 +10,10 @@ import { MovieReviewComponent } from './Components/movie-review/movie-review.com
 import { SearchboxComponent } from './Components/searchbox/searchbox.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ProfilePageComponent } from './Pages/profile-page/profile-page.component';
-
+import { LoginComponent } from './Components/login/login.component';
+import { SignupComponent } from './Components/signup/signup.component';
+import { SharedModule } from "./shared/shared.module";
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,15 +23,19 @@ import { ProfilePageComponent } from './Pages/profile-page/profile-page.componen
     MovieReviewComponent,
     ReviewLandingComponent,
     SearchboxComponent,
-    ProfilePageComponent
+    ProfilePageComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    AppRoutingModule 
-  ],
-  providers: [],
+    AppRoutingModule,
+    SharedModule,
+    ReactiveFormsModule
+],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

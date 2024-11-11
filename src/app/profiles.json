@@ -6,28 +6,32 @@
             "userName":"Juan",
             "date": "1991-01-22",
             "email": "juansito@gmail.com",
-            "cel": "2236635940"
+            "cel": "2236635940",
+            "password": "pass1"
         },
         {
             "id":2,
             "userName":"David",
             "date": "1986-01-22",
             "email": "daivid@gmail.com",
-            "cel": "2212398220"
+            "cel": "2212398220",
+            "password": "pass2"
         },
         {    
             "id":3,
             "userName":"Gabbyy",
             "date": "1990-01-22",
             "email": "lalala@gmail.com",
-            "cel": "2236631234"
+            "cel": "2236631234",
+            "password": "pass3"
         },
         {
             "id":4,
             "userName":"Eljony",
             "date": "1991-01-22",
             "email": "jonyman@gmail.com",
-            "cel": "2236234940"
+            "cel": "2236234940",
+            "password": "pass4"
         }
     ],
 
