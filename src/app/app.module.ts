@@ -15,6 +15,8 @@ import { SignupComponent } from './Components/signup/signup.component';
 import { SharedModule } from "./shared/shared.module";
 import { provideHttpClient } from '@angular/common/http';
 import { MovieSearchComponent } from './movie-search/movie-search.component';
+import { ReviewListComponent } from './Components/review-list/review-list.component';
+
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { MovieSearchComponent } from './movie-search/movie-search.component';
     ProfilePageComponent,
     LoginComponent,
     SignupComponent,
-    MovieSearchComponent
+    MovieSearchComponent,
+    ReviewListComponent
+
   ],
   imports: [
     BrowserModule,

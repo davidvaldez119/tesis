@@ -1,0 +1,26 @@
+<div class="review-list">
+  <h3>Reseñas de usuarios</h3>
+
+  <div *ngFor="let review of reviews" class="review">
+    <div class="review-header">
+      <p><strong>Usuario ID:</strong> {{ review.idProfile }}</p>
+      <p><strong>Puntuación:</strong> {{ review.score }}</p>
+    </div>
+    <div class="review-body">
+      <p><strong>Reseña:</strong></p>
+      <p>{{ review.description }}</p>
+    </div>
+  </div>
+
+  <h4>Agregar una nueva reseña</h4>
+  <div class="add-review">
+    <label for="score">Puntuación:</label>
+    <input type="number" id="score" [(ngModel)]="newReview.score" name="score" required min="0" max="5">
+
+    <label for="description">Reseña:</label>
+    <textarea id="description" [(ngModel)]="newReview.description" name="description" required></textarea>
+
+    <button type="button" (click)="addReview()">Agregar Reseña</button>
+  </div>
+</div>
+

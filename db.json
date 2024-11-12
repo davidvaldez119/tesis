@@ -1,0 +1,40 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "idProfile": 1,
+      "idMovie": 23,
+      "score": 5,
+      "description": "god",
+      "id": 2
+    },
+    {
+      "idProfile": 1,
+      "idMovie": 240,
+      "score": 4,
+      "description": "buenisima",
+      "id": 3
+    },
+    {
+      "idProfile": 1,
+      "idMovie": 424,
+      "score": 1,
+      "description": "no me gusto",
+      "id": 4
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
