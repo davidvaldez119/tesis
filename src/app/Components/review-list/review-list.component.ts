@@ -8,14 +8,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ReviewListComponent implements OnInit {
   @Input() peliculaID: number = 23;
-  userId: number = 1; 
-  reviews: any[] = []; 
-  newReview = { score: '', description: '' }; 
+  userId: number = 1;
+  reviews: any[] = [];
+  newReview = { score: '', description: '' };
+  starRating = 0; 
 
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.loadReviews(); 
+    this.loadReviews();
   }
 
   loadReviews() {
@@ -29,19 +30,25 @@ export class ReviewListComponent implements OnInit {
     );
   }
 
+  setStarRating(star: number) {
+    this.starRating = star * 2;
+    this.newReview.score = this.starRating.toString();
+  }
+
   addReview() {
     const newReviewData = {
-      idProfile: this.userId, 
-      idMovie: this.peliculaID,   
+      idProfile: this.userId,
+      idMovie: this.peliculaID,
       score: this.newReview.score,
-      description: this.newReview.description 
+      description: this.newReview.description
     };
 
     this.http.post('http://localhost:3000/comments', newReviewData).subscribe(
       (response) => {
         console.log('Reseña agregada:', response);
-        this.reviews.push(response); 
-        this.newReview = { score: '', description: '' }; 
+        this.reviews.push(response);
+        this.newReview = { score: '', description: '' };
+        this.starRating = 0;
       },
       (error) => {
         console.error('Error al agregar la reseña:', error);
