@@ -26,7 +26,7 @@ export class LoginComponent {
   onLogin() {
     if (this.form.invalid) return;
 
-    const user = this.form.getRawValue() as unknown as Profile;
+    const user = this.form.getRawValue() as Profile;
 
     this.profileService.login(user).subscribe({
       next: (loggedin) => {

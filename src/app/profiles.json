@@ -1,65 +1,67 @@
-
 {
   "profiles": [
-        {
-            "id":1,
-            "userName":"Juan",
-            "date": "1991-01-22",
-            "email": "juansito@gmail.com",
-            "cel": "2236635940",
-            "password": "pass1"
-        },
-        {
-            "id":2,
-            "userName":"David",
-            "date": "1986-01-22",
-            "email": "daivid@gmail.com",
-            "cel": "2212398220",
-            "password": "pass2"
-        },
-        {    
-            "id":3,
-            "userName":"Gabbyy",
-            "date": "1990-01-22",
-            "email": "lalala@gmail.com",
-            "cel": "2236631234",
-            "password": "pass3"
-        },
-        {
-            "id":4,
-            "userName":"Eljony",
-            "date": "1991-01-22",
-            "email": "jonyman@gmail.com",
-            "cel": "2236234940",
-            "password": "pass4"
-        }
-    ],
-
-    "review": 
-    [
-                {
-                    "idProfile": "1",
-                    "idMovie": "23",
-                    "score": "4.5",
-                    "description": "lorem ipsu"
-                },
-                {
-                    "idProfile": "1",
-                    "idMovie": "14",
-                    "score": "4.3",
-                    "description": "lorem ipsu"
-                },
-                {
-                    "idProfile": "2",
-                    "idMovie": "213",
-                    "score": "3",
-                    "description": "lorem ipsu"
-                },
-                {
-                    "idProfile": "3",
-                    "idMovie": "2",
-                    "score": "5",
-                    "description": "lorem ipsu"
-                }
-    ]
+    {
+      "id": 1,
+      "username": "Juan",
+      "date": "1991-01-22",
+      "email": "juansito@gmail.com",
+      "cel": "2236635940",
+      "password": "pass1"
+    },
+    {
+      "id": 2,
+      "username": "David",
+      "date": "1986-01-22",
+      "email": "daivid@gmail.com",
+      "cel": "2212398220",
+      "password": "pass2"
+    },
+    {
+      "id": 3,
+      "username": "Gabbyy",
+      "date": "1990-01-22",
+      "email": "lalala@gmail.com",
+      "cel": "2236631234",
+      "password": "pass3"
+    },
+    {
+      "id": 4,
+      "username": "Eljony",
+      "date": "1991-01-22",
+      "email": "jonyman@gmail.com",
+      "cel": "2236234940",
+      "password": "pass4"
+    },
+    {
+      "username": "gaby",
+      "password": "acostosa",
+      "id": 5
+    }
+  ],
+  "review": [
+    {
+      "idProfile": "1",
+      "idMovie": "23",
+      "score": "4.5",
+      "description": "lorem ipsu"
+    },
+    {
+      "idProfile": "1",
+      "idMovie": "14",
+      "score": "4.3",
+      "description": "lorem ipsu"
+    },
+    {
+      "idProfile": "2",
+      "idMovie": "213",
+      "score": "3",
+      "description": "lorem ipsu"
+    },
+    {
+      "idProfile": "3",
+      "idMovie": "2",
+      "score": "5",
+      "description": "lorem ipsu"
+    }
+  ]
 }

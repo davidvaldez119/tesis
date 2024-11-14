@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject,map,of,catchError,tap } from 'rxjs';
+import { BehaviorSubject,map,of,catchError,} from 'rxjs';
 import { Profile } from '../Interfaces/profileIn';
 import { HttpClient } from '@angular/common/http';
 
@@ -28,7 +28,7 @@ export class ProfileService {
   }
 
   login(user: Profile) {
-    return this.http.get<Profile[]>(`${this.baseUrl}?userName=${user.userName}`).pipe(
+    return this.http.get<Profile[]>(`${this.baseUrl}?username=${user.username}`).pipe(
       map(([u]) => {
         if (u && u.password === user.password) {
           this.activeUserSubject.next(u);

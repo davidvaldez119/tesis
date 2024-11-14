@@ -15,7 +15,7 @@ export class SignupComponent {
   private formBuilder = inject(FormBuilder);
 
   form = this.formBuilder.group({
-    userName: ['', [Validators.required]],
+    username: ['', [Validators.required]],
     password: ['', [Validators.required]]
   })
 
@@ -27,7 +27,7 @@ export class SignupComponent {
   onSignup() {
     if (this.form.invalid) return;
 
-    const user= this.form.getRawValue as unknown as Profile;
+    const user= this.form.getRawValue() as Profile;
 
     this.profileService.signup(user).subscribe({
       next: () => {

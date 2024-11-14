@@ -5,7 +5,7 @@ export interface ProfilesIn {
 
 export interface Profile {
     id?:       string,
-    userName: string,
+    username: string,
     date:     Date,
     email:    string,
     cel:      string,
