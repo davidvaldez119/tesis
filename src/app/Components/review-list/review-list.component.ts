@@ -31,7 +31,7 @@ export class ReviewListComponent implements OnInit {
   }
 
   setStarRating(star: number) {
-    this.starRating = star * 2;
+    this.starRating = star ;
     this.newReview.score = this.starRating.toString();
   }
 

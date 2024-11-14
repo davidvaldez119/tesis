@@ -4,10 +4,10 @@
   <h3 class="mt-4">Agrega tu reseña</h3>
 
   <div class="star-rating mb-3">
-    <span *ngFor="let star of [1, 2, 3, 4, 5]" 
+    <span *ngFor="let star of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" 
           (click)="setStarRating(star)" 
           class="star" 
-          [class.selected]="star * 2 <= starRating">
+          [class.selected]="star <= starRating">
       ★
     </span>
     <span class="ms-2">Calificación: {{ starRating }} / 10</span>
@@ -15,7 +15,7 @@
 
   <textarea [(ngModel)]="newReview.description" class="form-control mb-3" placeholder="Escribe tu reseña aquí..."></textarea>
   <button (click)="addReview()" class="btn btn-success">Agregar reseña</button>
-  
+
   <h3>Reseñas</h3>
 
   <div *ngFor="let review of reviews" class="review-item card mb-3 p-3 shadow-sm">
