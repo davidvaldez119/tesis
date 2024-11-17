@@ -16,6 +16,7 @@ import { SharedModule } from "./shared/shared.module";
 import { provideHttpClient } from '@angular/common/http';
 import { MovieSearchComponent } from './movie-search/movie-search.component';
 import { ReviewListComponent } from './Components/review-list/review-list.component';
+import { FooterComponent } from './Components/footer/footer.component';
 
 
 
@@ -31,7 +32,8 @@ import { ReviewListComponent } from './Components/review-list/review-list.compon
     LoginComponent,
     SignupComponent,
     MovieSearchComponent,
-    ReviewListComponent
+    ReviewListComponent,
+    FooterComponent
 
   ],
   imports: [

@@ -1,0 +1,54 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "idProfile": 1,
+      "idMovie": 899082,
+      "score": "7",
+      "description": "muy buena",
+      "id": 2
+    },
+    {
+      "idProfile": 1,
+      "idMovie": 18126,
+      "score": "1",
+      "description": "malar",
+      "id": 3
+    },
+    {
+      "idProfile": 1,
+      "idMovie": 18126,
+      "score": "10",
+      "description": "espectacular",
+      "id": 4
+    },
+    {
+      "idProfile": 1,
+      "idMovie": 389,
+      "score": "5",
+      "description": "no me gusto el final",
+      "id": 5
+    },
+    {
+      "idProfile": 1,
+      "idMovie": 240,
+      "score": "9",
+      "description": "buenisima",
+      "id": 7
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

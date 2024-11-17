@@ -55,3 +55,24 @@ button {
   font-size: 1rem;
   border-radius: 5px;
 }
+.review-header {
+  display: flex;
+  align-items: center;
+}
+
+.review-header button {
+  border: none;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.review-header button:hover {
+  background: darkred;
+}

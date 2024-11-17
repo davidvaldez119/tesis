@@ -16,7 +16,7 @@ export class MovieReviewComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.movieId = +params['id'];
+      this.movieId = +params['id']; 
       this.loadMovieDetails();
     });
   }
