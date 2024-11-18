@@ -24,7 +24,6 @@ export class MovieReviewComponent implements OnInit {
     this.tmdbService.getMovieDetails(this.movieId).subscribe(
       (response) => {
         this.movieDetails = response;
-        console.log('Detalles de la película:', this.movieDetails);
       },
       (error) => {
         console.error('Error al obtener los detalles de la película:', error);

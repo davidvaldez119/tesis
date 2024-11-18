@@ -83,6 +83,13 @@
       "score": 9,
       "description": "muy buena",
       "id": 14
+    },
+    {
+      "idProfile": 8,
+      "idMovie": 238,
+      "score": 6,
+      "description": "Muy buena peli",
+      "id": 15
     }
   ],
   "profiles": [
@@ -135,6 +142,14 @@
       "cel": "2235777509",
       "email": "agusampa0@gmail.com",
       "id": 7
+    },
+    {
+      "username": "David",
+      "password": "123",
+      "date": "1998-06-18",
+      "cel": "223111111",
+      "email": "mail@gmail.com",
+      "id": 8
     }
   ]
 }

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProfileService } from '../../Services/profile.service.ts.service';
 import { ReviewService } from '../../Services/review.service';
 import { Profile } from '../../Interfaces/profileIn';
+import { TmdbService } from '../../Services/tmdb.service';
 
 @Component({
   selector: 'app-detalle-perfil',
@@ -10,13 +11,15 @@ import { Profile } from '../../Interfaces/profileIn';
   styleUrls: ['./detalle-perfil.component.css']
 })
 export class DetallePerfilComponent implements OnInit {
+[x: string]: any;
   userProfile: Profile | undefined;
   reviews: any[] = [];
   userLoggedIn: boolean = false;
 
   constructor(
     private profileService: ProfileService,
-    private reviewService: ReviewService
+    private reviewService: ReviewService,
+    private tmdbService: TmdbService
   ) {}
 
   ngOnInit(): void {
@@ -54,4 +57,6 @@ export class DetallePerfilComponent implements OnInit {
       }
     );
   }
+
+
 }

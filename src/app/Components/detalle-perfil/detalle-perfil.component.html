@@ -16,6 +16,7 @@
   
       <div *ngFor="let review of reviews" class="review-card">
         <div class="review-header">
+          <span class="review-name">Id Pelicula: {{ review.id }} </span>
           <span class="review-score">Calificación: {{ review.score }} / 10</span>
           <button class="delete-btn" (click)="deleteReview(review.id)">Eliminar</button>
         </div>
