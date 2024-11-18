@@ -1,7 +1,7 @@
 // movie-search.component.ts
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { TmdbService } from '../Services/tmdb.service';
+import { TmdbService } from '../../Services/tmdb.service';
 
 
 @Component({

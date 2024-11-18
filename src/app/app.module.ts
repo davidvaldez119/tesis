@@ -14,7 +14,7 @@ import { LoginComponent } from './Components/login/login.component';
 import { SignupComponent } from './Components/signup/signup.component';
 import { SharedModule } from "./shared/shared.module";
 import { provideHttpClient } from '@angular/common/http';
-import { MovieSearchComponent } from './movie-search/movie-search.component';
+import { MovieSearchComponent } from './Components/movie-search/movie-search.component';
 import { ReviewListComponent } from './Components/review-list/review-list.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { DetallePerfilComponent } from './Components/detalle-perfil/detalle-perfil.component';

@@ -106,6 +106,14 @@
       "username": "agus",
       "password": "123",
       "id": 6
+    },
+    {
+      "username": "agus1",
+      "password": "123",
+      "date": "2000-02-05",
+      "cel": "2235777509",
+      "email": "agusampa0@gmail.com",
+      "id": 7
     }
   ]
 }

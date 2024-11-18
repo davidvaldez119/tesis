@@ -5,7 +5,7 @@ import { MovieReviewComponent } from './Components/movie-review/movie-review.com
 import { ProfilePageComponent } from './Pages/profile-page/profile-page.component';
 import { LoginComponent } from './Components/login/login.component';
 import { SignupComponent } from './Components/signup/signup.component';
-import { MovieSearchComponent } from './movie-search/movie-search.component';
+import { MovieSearchComponent } from './Components/movie-search/movie-search.component';
 import { DetallePerfilComponent } from './Components/detalle-perfil/detalle-perfil.component';
 
 const routes: Routes = [

@@ -16,7 +16,10 @@ export class SignupComponent {
 
   form = this.formBuilder.group({
     username: ['', [Validators.required]],
-    password: ['', [Validators.required]]
+    password: ['', [Validators.required]],
+    date: ['', [Validators.required]],
+    cel: ['', [Validators.required]],
+    email: ['', [Validators.required]]
   })
 
   constructor(
@@ -27,7 +30,7 @@ export class SignupComponent {
   onSignup() {
     if (this.form.invalid) return;
 
-    const user= this.form.getRawValue() as Profile;
+    const user= this.form.getRawValue() as unknown as Profile;
 
     this.profileService.signup(user).subscribe({
       next: () => {
