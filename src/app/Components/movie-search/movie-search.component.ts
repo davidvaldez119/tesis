@@ -1,4 +1,3 @@
-// movie-search.component.ts
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TmdbService } from '../../Services/tmdb.service';
@@ -40,14 +39,3 @@ export class MovieSearchComponent implements OnInit {
     }
 
 
-    /*getMovies(searchTerm: string) {
-       
-        
-        this.movieService.getMovies(searchTerm).subscribe(data => {
-            console.log(data);
-           
-                this.movies = data.Search;
-            
-           
-        })
-                */

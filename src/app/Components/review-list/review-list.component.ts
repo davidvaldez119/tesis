@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ReviewService } from '../../Services/review.service';
 import { ProfileService } from '../../Services/profile.service.ts.service';
+import { Profile } from '../../Interfaces/profileIn';
 
 @Component({
   selector: 'app-review-list',
@@ -9,12 +10,14 @@ import { ProfileService } from '../../Services/profile.service.ts.service';
   styleUrls: ['./review-list.component.css'],
 })
 export class ReviewListComponent implements OnInit {
+[x: string]: any;
   @Input() peliculaID: number = 23;
   userId: number | undefined = undefined;
   reviews: any[] = [];
   reviewForm: FormGroup;
   starRating = 0;
   userLoggedIn: boolean = false; 
+  userProfile: Profile | undefined;
 
   constructor(
     private reviewService: ReviewService,

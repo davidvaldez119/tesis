@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject,map,of,catchError,} from 'rxjs';
+import { BehaviorSubject,map,of,catchError, Observable,} from 'rxjs';
 import { Profile } from '../Interfaces/profileIn';
 import { HttpClient } from '@angular/common/http';
 
@@ -45,4 +45,8 @@ export class ProfileService {
     return of(true);
   }
 
+  getUsuarioByID(userId: number): Observable<any[]> {
+    return this.http.get<any[]>(`${this.baseUrl}?idProfile=${userId}`);
+  }
+  
 }

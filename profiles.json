@@ -62,6 +62,27 @@
       "score": 10,
       "description": "me encanto",
       "id": 11
+    },
+    {
+      "idProfile": 7,
+      "idMovie": 424,
+      "score": 4,
+      "description": "media mala",
+      "id": 12
+    },
+    {
+      "idProfile": 7,
+      "idMovie": 19995,
+      "score": 10,
+      "description": "buenisima",
+      "id": 13
+    },
+    {
+      "idProfile": 7,
+      "idMovie": 389,
+      "score": 9,
+      "description": "muy buena",
+      "id": 14
     }
   ],
   "profiles": [

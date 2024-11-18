@@ -24,7 +24,6 @@ export class DetallePerfilComponent implements OnInit {
     this.loadUserReviews();
   }
 
-
   loadUserProfile() {
     this.profileService.auth().subscribe(user => {
       if (user) {
@@ -35,7 +34,6 @@ export class DetallePerfilComponent implements OnInit {
       }
     });
   }
-
 
   loadUserReviews() {
     if (this.userProfile && this.userProfile.id) {
