@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { TmdbService } from '../../Services/tmdb.service';
 import { MoviesIn } from '../../Interfaces/movieIn';
-
 
 @Component({
   selector: 'app-carrusel',
@@ -11,32 +10,26 @@ import { MoviesIn } from '../../Interfaces/movieIn';
 export class CarruselComponent implements OnInit {
   topRatedMovies: MoviesIn[] = [];
   currentSlideIndex: number = 0;
-  currentSlideIndex2: number = 0;
   maxVisibleMovies: number = 5;
-  popularMovies: any[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private tmdbService: TmdbService) {}
 
   ngOnInit() {
     this.loadTopRatedMovies();
   }
 
   loadTopRatedMovies() {
-    this.http
-      .get(
-        'https://api.themoviedb.org/3/movie/top_rated?api_key=c130076811f0e957626523dba642db29&language=es-US&page=1'
-      )
-      .subscribe(
-        (response: any) => {
-          if (response && response.results) {
-            this.topRatedMovies = response.results.slice(0, 10);
-            console.log("Películas cargadas:", this.topRatedMovies); 
-          }
-        },
-        (error) => {
-          console.error('Error al obtener las películas:', error);
+    this.tmdbService.getTopRatedMovies().subscribe(
+      (response: any) => {
+        if (response && response.results) {
+          this.topRatedMovies = response.results.slice(0, 10);
+          console.log('Películas cargadas:', this.topRatedMovies);
         }
-      );
+      },
+      (error) => {
+        console.error('Error al obtener las películas:', error);
+      }
+    );
   }
 
   prevSlide() {
@@ -64,5 +57,3 @@ export class CarruselComponent implements OnInit {
     return this.currentSlideIndex >= this.topRatedMovies.length - this.maxVisibleMovies;
   }
 }
-
-  

@@ -17,6 +17,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { MovieSearchComponent } from './movie-search/movie-search.component';
 import { ReviewListComponent } from './Components/review-list/review-list.component';
 import { FooterComponent } from './Components/footer/footer.component';
+import { DetallePerfilComponent } from './Components/detalle-perfil/detalle-perfil.component';
 
 
 
@@ -33,7 +34,8 @@ import { FooterComponent } from './Components/footer/footer.component';
     SignupComponent,
     MovieSearchComponent,
     ReviewListComponent,
-    FooterComponent
+    FooterComponent,
+    DetallePerfilComponent
 
   ],
   imports: [

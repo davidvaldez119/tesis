@@ -1,17 +1,15 @@
-/* General styling */
 .footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000; /* Color negro para todo el ancho */
+    background-color: #000;
     color: #fff;
     padding: 40px 20px;
-    font-family: 'Roboto', sans-serif; /* Fuente estilizada */
+    font-family: 'Roboto', sans-serif; 
     width: 100%;
     box-sizing: border-box;
   }
   
-  /* Social media styling */
   .footer-left {
     display: flex;
     align-items: center;
@@ -25,7 +23,7 @@
   }
   
   .social-icon img {
-    width: 50px; /* Tamaño más grande */
+    width: 50px; 
     height: 50px;
     margin-right: 10px;
   }
@@ -34,8 +32,7 @@
     font-size: 1.2rem;
     font-weight: bold;
   }
-  
-  /* About us styling */
+ 
   .footer-right {
     max-width: 50%;
     text-align: justify;
@@ -51,8 +48,7 @@
     font-size: 1rem;
     line-height: 1.6;
   }
-  
-  /* Responsive design */
+ 
   @media (max-width: 768px) {
     .footer-container {
       flex-direction: column;

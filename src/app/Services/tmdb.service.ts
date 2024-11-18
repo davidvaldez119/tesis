@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -16,6 +17,9 @@ export class TmdbService {
   }
 
   getTopRatedMovies(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/movie/top_rated?api_key=${this.apiKey}&language=en-US&page=1`);
+    return this.http.get(`${this.baseUrl}/movie/top_rated?api_key=${this.apiKey}&language=es-US&page=1`);
+  }
+  getMovieDetails(movieId: number): Observable<any> {
+    return this.http.get(`${this.baseUrl}/movie/${movieId}?api_key=${this.apiKey}&language=es-US`);
   }
 }
