@@ -1,0 +1,16 @@
+<div class="searcher">
+  <div class="row align-items-center py-3">
+  <div class="movie-searchbox mt-4">
+    <h2 class="mb-3">Buscador</h2>
+    <div class="d-flex overflow-auto">
+          <input
+            type="text"
+            class="form-control"
+            [placeholder]="placeholder"
+            (keyup.enter)="emitValue(txtInput.value)"
+            #txtInput
+          >
+    </div>
+  </div>
+
+

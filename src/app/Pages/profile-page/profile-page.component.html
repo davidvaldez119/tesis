@@ -1,0 +1,70 @@
+
+<div>
+    <label for="search">Buscar Perfil:</label>
+    <input
+      id="search"
+      type="text"
+      [(ngModel)]="query"
+      (ngModelChange)="onSearchChange(query)"
+      placeholder="Buscar por nombre de usuario"
+     
+    />
+    
+    <button (click)="buscarPerfiles()">Buscar</button>
+  </div>
+  <div *ngIf="searchResults.length > 0">
+    <h3>Resultados de la búsqueda:</h3>
+    <li *ngFor="let perfil of perfiles">{{ perfil }} </li>
+    <div *ngFor="let profile of searchResults" class="profile-card">
+      <p><strong>Usuario:</strong> {{ profile.username }}</p>
+      <p><strong>Email:</strong> {{ profile.email }}</p>
+      <p><strong>Fecha de nacimiento:</strong> {{ profile.date | date }}</p>
+      <p><strong>Celular:</strong> {{ profile.cel }}</p>
+    </div>
+  </div>
+  
+  <div *ngIf="noResults">
+    <p>No se encontraron resultados.</p>
+  </div>
+  
+  
+  
+
+
+<div class="container" >
+    <div class="container">
+        <div class="row align-items-center py-3">
+          <div class="col-md-3 text-center">
+            <p class="mt-5 text-center"></p>
+            <p>Aqui se detallan los perfiles</p>
+            <a [routerLink]="['/']" class="movie-title-link"> 
+              <img src="assets/logo1-butaca-critica.png" alt="La Butaca Crítica" class="img-fluid logo">
+            </a>
+          </div>
+      
+          <div class="col-md-6">
+            
+            <div class="input-group">
+                <div class="col-md-2 text-end">
+                    <a [routerLink]="['/profile-container']">
+                      <img src="assets/user-profile.png" alt="Perfil del usuario" class="rounded-circle" style="width: 50px; height: 50px;">
+                    </a>
+                    <button [routerLink]="['/profile-container']" routerLinkActive="router-link-active">Perfiles</button>
+              <input type="text" [(ngModel)]="buscar">
+              <button (click)="buscarPerfiles()">Buscar</button>
+    <ul>
+      <li *ngFor="let perfil of perfiles">{{ perfil }} </li>
+    
+    </ul>
+              
+            </div>
+            
+          </div>
+          </div>
+      
+          
+        </div>
+      </div>
+
+        
+</div>

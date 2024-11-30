@@ -1,0 +1,155 @@
+{
+  "comments": [
+    {
+      "idProfile": 1,
+      "idMovie": 899082,
+      "score": "7",
+      "description": "muy buena",
+      "id": 2
+    },
+    {
+      "idProfile": 1,
+      "idMovie": 18126,
+      "score": "1",
+      "description": "malar",
+      "id": 3
+    },
+    {
+      "idProfile": 1,
+      "idMovie": 18126,
+      "score": "10",
+      "description": "espectacular",
+      "id": 4
+    },
+    {
+      "idProfile": 1,
+      "idMovie": 389,
+      "score": "5",
+      "description": "no me gusto el final",
+      "id": 5
+    },
+    {
+      "idProfile": 1,
+      "idMovie": 240,
+      "score": "9",
+      "description": "buenisima",
+      "id": 7
+    },
+    {
+      "idProfile": 2,
+      "idMovie": 278,
+      "score": "6",
+      "description": "Buenaaaa",
+      "id": 8
+    },
+    {
+      "idProfile": 2,
+      "idMovie": 240,
+      "score": 9,
+      "description": "Muy buena la pelicula, me gusto el final",
+      "id": 9
+    },
+    {
+      "idProfile": 6,
+      "idMovie": 389,
+      "score": 5,
+      "description": "asdffg",
+      "id": 10
+    },
+    {
+      "idProfile": 4,
+      "idMovie": 424,
+      "score": 10,
+      "description": "me encanto",
+      "id": 11
+    },
+    {
+      "idProfile": 7,
+      "idMovie": 424,
+      "score": 4,
+      "description": "media mala",
+      "id": 12
+    },
+    {
+      "idProfile": 7,
+      "idMovie": 19995,
+      "score": 10,
+      "description": "buenisima",
+      "id": 13
+    },
+    {
+      "idProfile": 7,
+      "idMovie": 389,
+      "score": 9,
+      "description": "muy buena",
+      "id": 14
+    },
+    {
+      "idProfile": 8,
+      "idMovie": 238,
+      "score": 6,
+      "description": "Muy buena peli",
+      "id": 15
+    }
+  ],
+  "profiles": [
+    {
+      "id": 1,
+      "username": "Juan",
+      "date": "1991-01-22",
+      "email": "juansito@gmail.com",
+      "cel": "2236635940",
+      "password": "pass1"
+    },
+    {
+      "id": 2,
+      "username": "David",
+      "date": "1986-01-22",
+      "email": "daivid@gmail.com",
+      "cel": "2212398220",
+      "password": "pass2"
+    },
+    {
+      "id": 3,
+      "username": "Gabbyy",
+      "date": "1990-01-22",
+      "email": "lalala@gmail.com",
+      "cel": "2236631234",
+      "password": "pass3"
+    },
+    {
+      "id": 4,
+      "username": "Eljony",
+      "date": "1991-01-22",
+      "email": "jonyman@gmail.com",
+      "cel": "2236234940",
+      "password": "pass4"
+    },
+    {
+      "username": "gaby",
+      "password": "acostosa",
+      "id": 5
+    },
+    {
+      "username": "agus",
+      "password": "123",
+      "id": 6
+    },
+    {
+      "username": "agus1",
+      "password": "123",
+      "date": "2000-02-05",
+      "cel": "2235777509",
+      "email": "agusampa0@gmail.com",
+      "id": 7
+    },
+    {
+      "username": "David",
+      "password": "123",
+      "date": "1998-06-18",
+      "cel": "223111111",
+      "email": "mail@gmail.com",
+      "id": 8
+    }
+  ]
+}

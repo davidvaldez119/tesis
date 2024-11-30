@@ -1,0 +1,43 @@
+<app-barra-superior></app-barra-superior>
+<div *ngIf="userLoggedIn; else loginMessage"> 
+  <div class="profile-container">
+    <h2>Detalles del perfil</h2>
+    <div class="profile-info">
+      <p><strong>Usuario:</strong> {{ userProfile?.username }}</p>
+      <p><strong>Email:</strong> {{ userProfile?.email }}</p>
+      <p><strong>Fecha de nacimiento:</strong> {{ userProfile?.date }}</p>
+      <p><strong>Celular:</strong> {{ userProfile?.cel }}</p>
+    </div>
+    
+    <h3>Reseñas</h3>
+    <div *ngIf="reviews.length === 0" class="alert alert-warning">
+      No tienes reseñas disponibles.
+    </div>
+
+    <div *ngFor="let review of reviews" class="review-card">
+      <div class="review-header">
+        <span class="review-name">Id Pelicula: {{ review.id }} </span>
+        <span class="review-score">Calificación: {{ review.score }} / 10</span>
+        <button class="delete-btn" (click)="deleteReview(review.id)">Eliminar</button>
+      </div>
+      <p>{{ review.description }}</p>
+    </div>
+  </div>
+</div>
+<ng-template #loginMessage>
+  <div class="alert alert-info">
+    Por favor, inicia sesión para ver tu perfil y reseñas.
+  </div>
+</ng-template>
+
+<ng-template #loginMessage>
+  <div class="alert alert-info">
+    Por favor, inicia sesión para ver tu perfil y reseñas.
+  </div>
+</ng-template>
+
+  
+  <ng-template #loginMessage>
+    <p>Por favor, inicie sesión para ver los detalles de su perfil.</p>
+  </ng-template>
+  <app-footer></app-footer>

@@ -1,0 +1,48 @@
+<div class="review-list container mt-4">
+
+  <h3 class="mt-4">Agrega tu reseña</h3>
+
+  <form [formGroup]="reviewForm" (ngSubmit)="addReview()">
+    <div class="star-rating mb-3">
+      <span *ngFor="let star of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" 
+            (click)="setStarRating(star)" 
+            class="star" 
+            [class.selected]="star <= reviewForm.get('score')?.value">
+        ★
+      </span>
+      <span class="ms-2">Calificación: {{ reviewForm.get('score')?.value || 1 }} / 10</span>
+      <div *ngIf="reviewForm.get('score')?.invalid && reviewForm.get('score')?.touched" class="text-danger">
+        * La calificación es obligatoria y debe estar entre 1 y 10.
+      </div>
+    </div>
+
+    <textarea formControlName="description" class="form-control mb-3" placeholder="Escribe tu reseña aquí..."></textarea>
+    <div *ngIf="reviewForm.get('description')?.invalid && reviewForm.get('description')?.touched" class="text-danger">
+      * La descripción es obligatoria y debe tener al menos 5 caracteres.
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="reviewForm.invalid">Agregar reseña</button>
+  </form>
+
+  <div class="review-list container mt-4">
+    <h3>Reseñas</h3>  
+
+  
+    <div *ngIf="reviews.length === 0" class="alert alert-warning">
+      No hay reseñas disponibles para esta película.
+    </div>
+  
+    <div *ngFor="let review of reviews" class="review-item card mb-3 p-3 shadow-sm">
+      <div class="review-header d-flex align-items-center mb-2">
+        <span class="user-id badge bg-primary me-2">Usuario ID: {{ review.idProfile }}</span>
+        <span class="review-score ms-auto"><strong>Calificación:</strong> {{ review.score }} / 10</span>
+    
+        <button *ngIf="review.idProfile === userId" 
+           class="btn btn-danger btn-sm ms-3" 
+          (click)="deleteReview(review.id)">X</button>
+      </div>
+      <p class="review-description">{{ review.description }}</p>
+    </div>
+  </div>
+
+</div>

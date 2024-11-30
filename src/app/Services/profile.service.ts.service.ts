@@ -1,0 +1,56 @@
+import { Injectable } from '@angular/core';
+import { BehaviorSubject,map,of,catchError, Observable,} from 'rxjs';
+import { Profile } from '../Interfaces/profileIn';
+import { HttpClient } from '@angular/common/http';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ProfileService {
+
+   private baseUrl = 'http://localhost:3000/profiles'
+
+   private activeUserSubject = new BehaviorSubject<Profile | undefined>(undefined);
+   
+  constructor(private http: HttpClient) { }
+
+  getProfiles(query: string): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}/profiles?q=${query}`);
+  }
+
+  auth() {
+    return this.activeUserSubject.asObservable();
+  }
+
+  signup(user: Profile) {
+    return this.http.post<Profile>(this.baseUrl, user).pipe(
+      map((u) => {
+        this.activeUserSubject.next(u);
+        return true;
+      })
+    )
+  }
+
+  login(user: Profile) {
+    return this.http.get<Profile[]>(`${this.baseUrl}?username=${user.username}`).pipe(
+      map(([u]) => {
+        if (u && u.password === user.password) {
+          this.activeUserSubject.next(u);
+          return true
+        }
+        return false;
+      }),
+      catchError(() => of(false))
+    );
+  }
+
+  logout() {
+    this.activeUserSubject.next(undefined);
+    return of(true);
+  }
+
+  getUsuarioByID(userId: number): Observable<any[]> {
+    return this.http.get<any[]>(`${this.baseUrl}?idProfile=${userId}`);
+  }
+  
+}
